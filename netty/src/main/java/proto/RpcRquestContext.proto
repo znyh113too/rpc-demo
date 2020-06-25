@@ -1,0 +1,24 @@
+
+syntax = "proto3";
+//生成文件所在包名
+option java_package = "test.chao.pa.netty";
+//生成的java文件名
+option java_outer_classname = "RootProtoGen";
+
+
+message TypeValue{
+    string type = 1;
+    bytes value = 2;
+}
+
+message RequestContext {
+    int32 seq = 1;
+    string clz_name = 2;
+    string method_name = 3;
+    repeated TypeValue method_param= 4;
+}
+
+message ResponseContext {
+    int32 seq = 1;
+    TypeValue response_value= 2;
+}
